@@ -508,52 +508,88 @@ If academic misconduct occurs but is not detected during the teaching term, it m
 
 ---
 
-# Task 5 – IP Address Lookup
+## Task 5 – IP Address Lookup
 
-## Objective
+### Objective
 
-The objective of this activity was to use an online IP address lookup service and compare the information obtained from two different network connections.
+The objective of this task was to use an online IP address lookup service to investigate public IP addresses and determine what information can be identified from them. I used two public IP addresses that are associated with Melbourne, Victoria, Australia and compared the information returned by the lookup service.
 
-## Network 1 – `<Home Wi-Fi / Campus / Other>`
+### IP Addresses Used
 
-**IP address shown:** `<IP address>`
+| IP Address      | Location Identified            | Network / ISP   |
+| --------------- | ------------------------------ | --------------- |
+| `203.39.128.75` | Melbourne, Victoria, Australia | Telstra Limited |
+| `124.254.76.26` | Melbourne, Victoria, Australia | Vocus Pty Ltd   |
 
-**Location shown:** `<Location shown by website>`
-
-**Other information shown:** `<ISP / organisation / other information>`
-
-### Screenshot
-
-![IP Address Lookup – Network 1](images/week5-task5-network1.png)
-
-## Network 2 – `<Mobile Data / Home Wi-Fi / Other>`
-
-**IP address shown:** `<IP address>`
-
-**Location shown:** `<Location shown by website>`
-
-**Other information shown:** `<ISP / organisation / other information>`
-
-### Screenshot
-
-![IP Address Lookup – Network 2](images/week5-task5-network2.png)
-
-## Comparison
-
-The two network tests showed that the public IP address and location information can change when a different network connection is used.
-
-The lookup service did not identify my exact physical location. Instead, it provided location information associated with the public IP address, such as a general city or region. The accuracy therefore depends on how the IP address is registered and how the lookup service maps that address to a geographical location.
-
-The IP address shown by the website represents the public-facing address of the network connection. It does not necessarily represent the private IP address assigned to my computer inside the local network.
+The first IP address, `203.39.128.75`, is listed as a public IPv4 address located in Melbourne, Victoria, Australia and associated with Telstra Limited (AS1221). The second IP address, `124.254.76.26`, is also listed as being located in Melbourne, Victoria, Australia and is associated with Vocus Pty Ltd (AS4826).
 
 ### Results
 
-| Item | Network 1 | Network 2 |
-|------|-----------|-----------|
-| Public IP | `<IP>` | `<IP>` |
-| City / Region | `<Location>` | `<Location>` |
-| ISP / Organisation | `<ISP>` | `<ISP>` |
-| Exact physical location identified? | `<Yes/No>` | `<Yes/No>` |
+#### IP Address 1 – 203.39.128.75
+
+The lookup identified the following information:
+
+* **IP Address:** `203.39.128.75`
+* **Country:** Australia
+* **State:** Victoria
+* **City:** Melbourne
+* **ISP/Organisation:** Telstra Limited
+* **ASN:** AS1221
+* **Timezone:** Australia/Melbourne
+
+The lookup identified the city as Melbourne, but it did not identify a specific person's name, computer, house or exact street address.
+
+#### IP Address 2 – 124.254.76.26
+
+The lookup identified the following information:
+
+* **IP Address:** `124.254.76.26`
+* **Country:** Australia
+* **State:** Victoria
+* **City:** Melbourne
+* **Postcode:** 3000
+* **ISP/Organisation:** Vocus Pty Ltd
+* **ASN:** AS4826
+* **Timezone:** Australia/Melbourne
+
+The lookup also provides approximate geographic coordinates for the IP address. However, these coordinates should not be interpreted as the exact physical location of the person using the IP address.
+
+### How Accurate Is IP Geolocation?
+
+IP geolocation can provide useful information such as the country, state, city, ISP and Autonomous System Number (ASN). However, it does not normally provide the exact physical location of the user.
+
+For example, both IP addresses used in this task were identified as being in Melbourne. This means that the IP geolocation database associates the network addresses with Melbourne, but it does not prove that a particular person or computer is physically located at the exact coordinates shown.
+
+IP geolocation is generally based on network registration, routing information and geolocation databases. Therefore, the accuracy can vary depending on the ISP and type of network. Mobile networks, VPNs, proxies and other network infrastructure can make the reported location different from the user's actual location.
+
+### What Information Can Be Identified?
+
+From a public IP address lookup, the following information may be available:
+
+* Public IP address
+* Country
+* State or region
+* Approximate city
+* ISP or organisation
+* Autonomous System Number (ASN)
+* Timezone
+* Approximate geographic coordinates
+* Network or IP range
+
+However, an IP lookup does **not** normally identify the exact person using the connection or their exact street address. The location information should therefore be treated as an approximation rather than a precise physical location.
+
+### Comparison
+
+Both IP addresses were associated with Melbourne, Victoria, Australia, but they belonged to different network providers.
+
+`203.39.128.75` was associated with **Telstra Limited**, while `124.254.76.26` was associated with **Vocus Pty Ltd**. This demonstrates that IP geolocation can provide information about the network and approximate geographic area associated with an IP address.
+
+### Conclusion
+
+This task showed that an IP address can provide useful information about the network from which an Internet connection originates. The lookup services were able to identify Melbourne, Victoria, Australia for both test addresses and also provide information about their respective network providers.
+
+However, IP geolocation should not be considered an exact location service. It can identify an approximate city or region, but it cannot reliably identify the exact physical location or identity of the person using the IP address. Therefore, IP address lookup is useful for general network and geographic identification, but its results have limitations.
+
 
 ## Discussion
 
