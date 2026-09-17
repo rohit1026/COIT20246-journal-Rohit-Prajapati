@@ -82,77 +82,80 @@ This activity helped me understand that routing decisions are made using destina
 
 ## Objective
 
-The objective of this task was to design a small test network consisting of two switched Ethernet LANs connected through a point-to-point Ethernet WAN link.
+The objective of this task was to design a small test network consisting of two switched Ethernet LANs connected through a 1 Gb/s Ethernet point-to-point WAN link.
 
-The proposed network contains:
-
-- One LAN with three PCs.
-- One LAN with two PCs.
-- Two Ethernet switches.
-- Two routers.
-- A 1 Gb/s Ethernet point-to-point link between the routers.
-- Three separate IPv4 /24 networks.
+The network contains five PCs, two Gigabit Ethernet switches and two routers. The two LANs use separate IPv4 /24 networks, while the routers provide communication between the networks.
 
 ## Project Team
 
-**Team Member(s):**
-
-- Rohitash Kumawat Prajapati
-- `<Partner Name>`
+| Team Member | Student ID |
+|-------------|------------|
+| Rohit Hargovanbhai Prajapati | 12326317 |
+| Lehanul Islam Arnob | 12310097 |
 
 ---
 
-## Part A – IPv4 Network Addressing
+## Network Design
 
-The last four digits of my student ID are **6317**. Therefore, the first two decimal values used for my LAN are **63.17**.
+The network was divided into three IPv4 networks:
 
-For my LAN, I selected:
+- **LAN 1:** `63.17.1.0/24`
+- **LAN 2:** `9.7.1.0/24`
+- **WAN:** `10.0.0.0/24`
 
-`63.17.1.0/24`
+The first two decimal values of the first LAN were selected from the last four digits of my student ID, `6317`, resulting in the `63.17.x.x` address range.
 
-For the partner LAN, the first two decimal values should be based on the partner's last four student-ID digits.
+The partner's student ID ends in `0097`. Following the task requirement, the first two decimal values used for the second LAN are `9.7`.
 
-**Partner LAN:**
+The WAN network uses a separate private IPv4 network because it is a point-to-point connection between the two routers.
 
-`<partner-first-two-values>.1.0/24`
+---
 
-For the point-to-point WAN connection, I selected:
+## Part A – IPv4 Network Addresses and Device Assignments
 
-`10.0.0.0/24`
+### Network Addresses
 
-### Device and IP Address Table
+| Network | Purpose | Network Address | Subnet Mask |
+|---------|---------|-----------------|-------------|
+| LAN 1 | Rohit's LAN | `63.17.1.0/24` | `255.255.255.0` |
+| WAN | Router-to-router connection | `10.0.0.0/24` | `255.255.255.0` |
+| LAN 2 | Arnob's LAN | `9.7.1.0/24` | `255.255.255.0` |
 
-| Device | Interface | Network | Assigned IPv4 Address | Subnet Mask |
-|--------|-----------|---------|------------------------|-------------|
-| PC1 | Ethernet | My LAN | 63.17.1.10 | 255.255.255.0 |
-| PC2 | Ethernet | My LAN | 63.17.1.11 | 255.255.255.0 |
-| PC3 | Ethernet | My LAN | 63.17.1.12 | 255.255.255.0 |
-| Router 1 | LAN interface | My LAN | 63.17.1.1 | 255.255.255.0 |
-| Router 1 | WAN interface | WAN | 10.0.0.1 | 255.255.255.0 |
-| Router 2 | WAN interface | WAN | 10.0.0.2 | 255.255.255.0 |
-| Router 2 | LAN interface | Partner LAN | `<partner-first-two-values>.1.1` | 255.255.255.0 |
-| PC4 | Ethernet | Partner LAN | `<partner-first-two-values>.1.10` | 255.255.255.0 |
-| PC5 | Ethernet | Partner LAN | `<partner-first-two-values>.1.11` | 255.255.255.0 |
+### Device and Interface Addressing
 
-The two switches operate at Layer 2 and therefore do not require an IP address for basic packet forwarding in this design.
+| Device | Interface | Network | IPv4 Address | Subnet Mask |
+|--------|-----------|---------|--------------|-------------|
+| PC1 | Ethernet | LAN 1 | `63.17.1.10` | `255.255.255.0` |
+| PC2 | Ethernet | LAN 1 | `63.17.1.11` | `255.255.255.0` |
+| PC3 | Ethernet | LAN 1 | `63.17.1.12` | `255.255.255.0` |
+| Router 1 | LAN Interface | LAN 1 | `63.17.1.1` | `255.255.255.0` |
+| Router 1 | WAN Interface | WAN | `10.0.0.1` | `255.255.255.0` |
+| Router 2 | WAN Interface | WAN | `10.0.0.2` | `255.255.255.0` |
+| Router 2 | LAN Interface | LAN 2 | `9.7.1.1` | `255.255.255.0` |
+| PC4 | Ethernet | LAN 2 | `9.7.1.10` | `255.255.255.0` |
+| PC5 | Ethernet | LAN 2 | `9.7.1.11` | `255.255.255.0` |
 
-### Default Gateways
+The switches are Layer 2 devices in this design, so an IP address is not required for their basic switching function.
 
-| Device | Default Gateway |
-|--------|-----------------|
-| PC1 | 63.17.1.1 |
-| PC2 | 63.17.1.1 |
-| PC3 | 63.17.1.1 |
-| PC4 | `<partner-first-two-values>.1.1` |
-| PC5 | `<partner-first-two-values>.1.1` |
+### Default Gateway Configuration
+
+| Device | IP Address | Default Gateway |
+|--------|------------|-----------------|
+| PC1 | `63.17.1.10` | `63.17.1.1` |
+| PC2 | `63.17.1.11` | `63.17.1.1` |
+| PC3 | `63.17.1.12` | `63.17.1.1` |
+| PC4 | `9.7.1.10` | `9.7.1.1` |
+| PC5 | `9.7.1.11` | `9.7.1.1` |
 
 ---
 
 ## Part B – Network Diagram
 
-The network diagram shows the two separate switched LANs and the Ethernet point-to-point WAN connection between the routers.
+The network consists of two separate switched Ethernet LANs.
 
-The first LAN contains three PCs connected to Switch 1. The second LAN contains two PCs connected to Switch 2. Router 1 connects the first LAN to the WAN, while Router 2 connects the WAN to the second LAN.
+The first LAN contains three PCs connected to Switch 1. Switch 1 is connected to Router 1. The second LAN contains two PCs connected to Switch 2, which is connected to Router 2.
+
+Router 1 and Router 2 are connected using a 1 Gb/s Ethernet point-to-point WAN link.
 
 ### Network Diagram
 
@@ -164,13 +167,13 @@ The first LAN contains three PCs connected to Switch 1. The second LAN contains 
 
 ---
 
-## Discussion
+## Network Topology
 
-The design uses three separate IPv4 /24 networks. This separation allows the two LANs to operate as different IP networks while the routers provide communication between them.
-
-The switches provide local Ethernet connectivity for the PCs. The routers operate at Layer 3 and are responsible for forwarding packets between the LAN networks through the point-to-point WAN connection.
-
----
+```text
+PC1 ─┐
+PC2 ─┼── Switch 1 ── Router 1 ═══ 1 Gb/s WAN ═══ Router 2 ── Switch 2 ──┬─ PC4
+PC3 ─┘                                                                    └─ PC5
+```
 
 ## Part C – Routing Tables
 
