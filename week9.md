@@ -395,7 +395,7 @@ Overall, I believe the main goal should be to reduce the risk to users. Research
 
 ---
 
-# Final Week 09 Summary
+# Summary
 
 This week's activities covered the relationship between network assets, security protections, threat sources and software vulnerabilities.
 
