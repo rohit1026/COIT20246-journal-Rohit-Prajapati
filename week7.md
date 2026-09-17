@@ -183,34 +183,37 @@ The AI response suggested several practical teamwork practices:
 9. Keep task status and blockers visible to the team.
 10. Support other team members when they are blocked.
 
-### Comparison with Project Teamwork
+### GitHub Contributors
 
-The AI recommendations provide a useful checklist for evaluating how a software development team works. In my project, GitHub is being used as the project repository and team members contribute work to the same project.
+The GitHub repository was reviewed using the **Insights → Contributors** section to examine the contribution activity of the team members.
 
-The recommendations about communication, task allocation and documentation are particularly relevant because a group project requires members to understand what others are working on and what remains to be completed. Clear task ownership can reduce duplicated work and make it easier to identify unfinished tasks.
+The Contributors page shows the commit activity over the selected period. The screenshot shows the contribution graph and the number of commits made by the available contributor.
 
-The recommendation about meaningful Git commits is also relevant because commit history provides a record of how the project has developed. Keeping commits focused on meaningful changes makes the project history easier to understand.
+![GitHub Contributors](images/week7-task4-github-contributors.png)
 
-### GitHub Contribution Review
+**Figure 7:** GitHub Contributors page showing project commit activity.
 
-The project repository is private, and the **Insights → Contributors** view shown in the tutorial was not available in the repository interface available to me. Therefore, I have not invented commit counts or a comparison with other teams.
+### Contribution Comparison
 
-Because the required Contributors evidence was not available, an accurate numerical comparison of the number of commits made by each team member or comparison with other teams cannot be made from the evidence collected for this journal.
+According to the GitHub Contributors page, the repository currently shows **38 commits** from the contributor `rohit1026`. The contribution graph also shows that the commits were made during several different weeks, with the highest activity occurring in the most recent week shown.
 
-A useful improvement for the remainder of the project is to maintain clear GitHub contribution records and use meaningful commit messages so that each member's work can be identified easily.
+The contributor's activity includes **3,038 additions** and **1,218 deletions**. This indicates that a significant amount of code or project content has been added and modified in the repository.
 
-### Teamwork Improvements for the Remainder of the Project
+Based on the available Contributors information, my contribution to the project can be reviewed through my GitHub activity. The contribution pattern shows that work was completed across multiple weeks rather than being limited to a single contribution period.
 
-Based on the AI recommendations, the following practices should be maintained or improved:
+### Team Contribution and Improvement
 
-- Keep project communication clear and focused.
-- Assign specific tasks to team members.
-- Keep documentation updated as the project changes.
-- Use meaningful Git commit messages.
-- Communicate blockers early instead of waiting until the deadline.
-- Review important changes before they become part of the final project.
-- Discuss technical disagreements using project requirements and evidence.
-- Regularly check overall project progress against the remaining deadlines.
+The Contributors page provides useful evidence of project activity, but the screenshot currently shows only one contributor. Therefore, I cannot make a reliable numerical comparison between all team members from this screenshot alone.
+
+For the remainder of the project, the team can improve collaboration by making regular and meaningful commits, clearly describing changes in commit messages, dividing work into specific tasks, and ensuring that all members contribute consistently.
+
+Regular communication and reviewing each other's work can also help the team identify problems earlier and maintain a more balanced contribution across members.
+
+### Reflection on GitHub Contribution
+
+Reviewing the Contributors page helped me understand how GitHub can be used to track project development over time. The commit graph provides a visual representation of when development activity occurred, while the additions and deletions provide an indication of how much content was changed.
+
+For the remainder of the project, I will continue making meaningful commits and ensure that my work is clearly documented in GitHub. This will make the development history easier for the team and tutor to understand.
 
 ---
 
