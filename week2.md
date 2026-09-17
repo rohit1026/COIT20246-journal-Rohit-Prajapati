@@ -1,6 +1,6 @@
 # Week 02 Journal – Computer Systems and Applications
 
-**Assessment:** COIT20246 Assessment 1 Part A  
+**Assessment:** COIT20246 Assessment 1 Part B
 
 
 **Student Name:** Rohit Hargovanbhai Prajapati
