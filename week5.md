@@ -54,12 +54,19 @@ The main information in each routing entry can be understood as follows:
 
 The following table describes the important rows shown in my PowerShell routing-table screenshot.
 
-| Destination | Mask / Prefix | Gateway | Interface | Description |
-|-------------|---------------|---------|-----------|-------------|
-| `<destination>` | `<mask>` | `<gateway>` | `<interface>` | `<simple description>` |
-| `<destination>` | `<mask>` | `<gateway>` | `<interface>` | `<simple description>` |
-| `<destination>` | `<mask>` | `<gateway>` | `<interface>` | `<simple description>` |
-| `<destination>` | `<mask>` | `<gateway>` | `<interface>` | `<simple description>` |
+| Destination | Netmask | Gateway | Interface | Description |
+|-------------|---------|---------|-----------|-------------|
+| `0.0.0.0` | `0.0.0.0` | `192.168.1.254` | `192.168.1.64` | Default route used to forward traffic to networks that do not have a more specific route. |
+| `127.0.0.0` | `255.0.0.0` | `On-link` | `127.0.0.1` | Route for the local loopback network. Traffic remains within the computer. |
+| `127.0.0.1` | `255.255.255.255` | `On-link` | `127.0.0.1` | Route for the local loopback address of the computer. |
+| `127.255.255.255` | `255.255.255.255` | `On-link` | `127.0.0.1` | Loopback broadcast route for the local loopback network. |
+| `192.168.1.0` | `255.255.255.0` | `On-link` | `192.168.1.64` | Directly connected local network. Devices on the `192.168.1.0/24` network can be reached through the Wi-Fi interface. |
+| `192.168.1.64` | `255.255.255.255` | `On-link` | `192.168.1.64` | Route for the computer's own IPv4 address on the local network. |
+| `192.168.1.255` | `255.255.255.255` | `On-link` | `192.168.1.64` | Broadcast address for the local `192.168.1.0/24` network. |
+| `224.0.0.0` | `240.0.0.0` | `On-link` | `127.0.0.1` | Route for IPv4 multicast traffic associated with the loopback interface. |
+| `224.0.0.0` | `240.0.0.0` | `On-link` | `192.168.1.64` | Route for IPv4 multicast traffic on the local Wi-Fi network. |
+| `255.255.255.255` | `255.255.255.255` | `On-link` | `127.0.0.1` | Limited broadcast route associated with the loopback interface. |
+| `255.255.255.255` | `255.255.255.255` | `On-link` | `192.168.1.64` | Limited broadcast route associated with the local Wi-Fi interface. |
 
 The exact values in this table should match the entries visible in the routing-table screenshot.
 
