@@ -122,7 +122,7 @@ The Windows host and OpenWRT management interface are on the same `192.168.56.0/
 
 ### Network Diagram
 
-![Ping Network Diagram](images/week4-task4-ping.png)
+![Ping Network Diagram](images/week4task4-ping.png)
 
 ### Original Draw.io File
 
@@ -186,11 +186,11 @@ The Ethernet header is **14 bytes**, while the ARP message is **28 bytes**. Ther
 
 ### Packet Diagram
 
-![First ARP Packet Diagram](images/week4-task4-arp.png)
+![First ARP Packet Diagram](images/week4task4-part(d).png)
 
 ### Original Draw.io File
 
-`week4-task4-arp.drawio`
+`week4task4-part(d).drawio`
 
 ---
 
@@ -263,11 +263,11 @@ The Ethernet header and IPv4 header provide the information required to deliver 
 
 ### Packet Diagram
 
-![First ICMP Packet Diagram](images/week4-task4-icmp.png)
+![First ICMP Packet Diagram](images/week4task4-part(f).png)
 
 ### Original Draw.io File
 
-`week4-task4-icmp.drawio`
+`week4task4-part(f).drawio`
 
 ---
 
