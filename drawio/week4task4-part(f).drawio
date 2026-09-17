@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="YS2FqB8MWo-gN4IUrj7g">
+    <mxGraphModel dx="1414" dy="805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Q3lVA4yp0P8xuDqXOFva-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Name: Rohit&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;week4task4-part(f)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="250" x="290" y="30" as="geometry" />
+        </mxCell>
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TB\n    TITLE[\&quot;&lt;b&gt;Part (f) — First ICMP Packet&lt;/b&gt;&lt;br/&gt;ICMP Echo Request Encapsulation&lt;br/&gt;&lt;b&gt;Total: 74 Bytes&lt;/b&gt;\&quot;]\n\n    ETH[\&quot;&lt;b&gt;Ethernet II Header — 14 Bytes&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Source MAC: 0a:00:27:00:00:2d&lt;br/&gt;Destination MAC: 08:00:27:73:12:ad&lt;br/&gt;EtherType: IPv4 (0x0800)\&quot;]\n\n    IP[\&quot;&lt;b&gt;IPv4 Header — 20 Bytes&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Source IP: 192.168.56.1&lt;br/&gt;Destination IP: 192.168.56.2&lt;br/&gt;Protocol: ICMP (1)&lt;br/&gt;TTL: 128\&quot;]\n\n    ICMP[\&quot;&lt;b&gt;ICMP Header — 8 Bytes&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Type: 8 — Echo Request&lt;br/&gt;Code: 0&lt;br/&gt;Identifier: 0x0001&lt;br/&gt;Sequence Number: 5/1280\&quot;]\n\n    DATA[\&quot;&lt;b&gt;ICMP Data / Payload — 32 Bytes&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Ping payload data\&quot;]\n\n    TOTAL[\&quot;&lt;b&gt;Total Ethernet Frame: 74 Bytes&lt;/b&gt;&lt;br/&gt;14 + 20 + 8 + 32 = 74 Bytes\&quot;]\n\n    TITLE --&gt; ETH\n    ETH --&gt; IP\n    IP --&gt; ICMP\n    ICMP --&gt; DATA\n    DATA --&gt; TOTAL&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="kNWsei4n9w-akxqIbQaQ-29">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Part (f) — First ICMP Packet&lt;/b&gt;&#xa;ICMP Echo Request Encapsulation&#xa;&lt;b&gt;Total: 74 Bytes&lt;/b&gt;" mermaidId="n:TITLE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="&lt;b&gt;Part (f) — First ICMP Packet&lt;/b&gt;&#xa;ICMP Echo Request Encapsulation&#xa;&lt;b&gt;Total: 74 Bytes&lt;/b&gt;" id="kNWsei4n9w-akxqIbQaQ-30">
+          <mxCell parent="kNWsei4n9w-akxqIbQaQ-29" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="93" width="310" x="304" y="100" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Ethernet II Header — 14 Bytes&lt;/b&gt;&#xa;&#xa;Source MAC: 0a:00:27:00:00:2d&#xa;Destination MAC: 08:00:27:73:12:ad&#xa;EtherType: IPv4 (0x0800)" mermaidId="n:ETH" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="&lt;b&gt;Ethernet II Header — 14 Bytes&lt;/b&gt;&#xa;&#xa;Source MAC: 0a:00:27:00:00:2d&#xa;Destination MAC: 08:00:27:73:12:ad&#xa;EtherType: IPv4 (0x0800)" id="kNWsei4n9w-akxqIbQaQ-31">
+          <mxCell parent="kNWsei4n9w-akxqIbQaQ-29" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="131" width="318" x="300" y="243" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;IPv4 Header — 20 Bytes&lt;/b&gt;&#xa;&#xa;Source IP: 192.168.56.1&#xa;Destination IP: 192.168.56.2&#xa;Protocol: ICMP (1)&#xa;TTL: 128" mermaidId="n:IP" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="&lt;b&gt;IPv4 Header — 20 Bytes&lt;/b&gt;&#xa;&#xa;Source IP: 192.168.56.1&#xa;Destination IP: 192.168.56.2&#xa;Protocol: ICMP (1)&#xa;TTL: 128" id="kNWsei4n9w-akxqIbQaQ-32">
+          <mxCell parent="kNWsei4n9w-akxqIbQaQ-29" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="150" width="262" x="328" y="424" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;ICMP Header — 8 Bytes&lt;/b&gt;&#xa;&#xa;Type: 8 — Echo Request&#xa;Code: 0&#xa;Identifier: 0x0001&#xa;Sequence Number: 5/1280" mermaidId="n:ICMP" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="&lt;b&gt;ICMP Header — 8 Bytes&lt;/b&gt;&#xa;&#xa;Type: 8 — Echo Request&#xa;Code: 0&#xa;Identifier: 0x0001&#xa;Sequence Number: 5/1280" id="kNWsei4n9w-akxqIbQaQ-33">
+          <mxCell parent="kNWsei4n9w-akxqIbQaQ-29" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="150" width="251" x="334" y="624" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;ICMP Data / Payload — 32 Bytes&lt;/b&gt;&#xa;&#xa;Ping payload data" mermaidId="n:DATA" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="&lt;b&gt;ICMP Data / Payload — 32 Bytes&lt;/b&gt;&#xa;&#xa;Ping payload data" id="kNWsei4n9w-akxqIbQaQ-34">
+          <mxCell parent="kNWsei4n9w-akxqIbQaQ-29" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="93" width="304" x="307" y="824" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Total Ethernet Frame: 74 Bytes&lt;/b&gt;&#xa;14 + 20 + 8 + 32 = 74 Bytes" mermaidId="n:TOTAL" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="&lt;b&gt;Total Ethernet Frame: 74 Bytes&lt;/b&gt;&#xa;14 + 20 + 8 + 32 = 74 Bytes" id="kNWsei4n9w-akxqIbQaQ-35">
+          <mxCell parent="kNWsei4n9w-akxqIbQaQ-29" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="294" x="312" y="967" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:TITLE-&gt;ETH#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="kNWsei4n9w-akxqIbQaQ-36">
+          <mxCell edge="1" parent="kNWsei4n9w-akxqIbQaQ-29" source="kNWsei4n9w-akxqIbQaQ-30" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="kNWsei4n9w-akxqIbQaQ-31">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:ETH-&gt;IP#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="kNWsei4n9w-akxqIbQaQ-37">
+          <mxCell edge="1" parent="kNWsei4n9w-akxqIbQaQ-29" source="kNWsei4n9w-akxqIbQaQ-31" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="kNWsei4n9w-akxqIbQaQ-32">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:IP-&gt;ICMP#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="kNWsei4n9w-akxqIbQaQ-38">
+          <mxCell edge="1" parent="kNWsei4n9w-akxqIbQaQ-29" source="kNWsei4n9w-akxqIbQaQ-32" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="kNWsei4n9w-akxqIbQaQ-33">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:ICMP-&gt;DATA#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="kNWsei4n9w-akxqIbQaQ-39">
+          <mxCell edge="1" parent="kNWsei4n9w-akxqIbQaQ-29" source="kNWsei4n9w-akxqIbQaQ-33" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="kNWsei4n9w-akxqIbQaQ-34">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:DATA-&gt;TOTAL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="kNWsei4n9w-akxqIbQaQ-40">
+          <mxCell edge="1" parent="kNWsei4n9w-akxqIbQaQ-29" source="kNWsei4n9w-akxqIbQaQ-34" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="kNWsei4n9w-akxqIbQaQ-35">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
