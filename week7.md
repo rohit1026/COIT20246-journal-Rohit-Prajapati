@@ -195,7 +195,7 @@ The Contributors page shows the commit activity over the selected period. The sc
 
 ### Contribution Comparison
 
-According to the GitHub Contributors page, the repository currently shows **38 commits** from the contributor `rohit1026`. The contribution graph also shows that the commits were made during several different weeks, with the highest activity occurring in the most recent week shown.
+According to the GitHub Contributors page, the repository currently shows **38 commits**. The contribution graph also shows that the commits were made during several different weeks, with the highest activity occurring in the most recent week shown.
 
 The contributor's activity includes **3,038 additions** and **1,218 deletions**. This indicates that a significant amount of code or project content has been added and modified in the repository.
 
