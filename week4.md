@@ -1,6 +1,6 @@
 # Week 04 Journal – Network Technologies
 
-**Assessment:** COIT20246 Assessment 1 Part A  
+**Assessment:** COIT20246 Assessment 1 Part B  
 
 **Student Name:** Rohit Hargovanbhai Prajapati  
 
