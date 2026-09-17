@@ -8,13 +8,13 @@
 
 ---
 
-## Task 1 – Knowledge Test
+# Task 1 – Knowledge Test
 
 I completed the Week 06 knowledge test as part of the tutorial activities.
 
 ---
 
-## Task 2 – Create Web Pages
+# Task 2 – Create Web Pages
 
 For this task, I created a simple web page using HTML, CSS and JavaScript. The page includes my name, student ID and information about the Week 06 Internet Applications activity.
 
@@ -28,11 +28,11 @@ mystyle.css
 
 The `12326317.html` page contains a **Show date and time** button. JavaScript handles the button click and displays the current date and time directly in the browser.
 
-### Web page before pressing the button
+## Web page before pressing the button
 
 ![Week 6 web page before pressing the button](images/week6_Task2_Web_Page_Before.png)
 
-### Web page after pressing the button
+## Web page after pressing the button
 
 ![Week 6 web page after pressing the button](images/week6_Task2_Web_Page_After.png)
 
@@ -40,7 +40,7 @@ The second screenshot shows my name, student ID and the date/time displayed afte
 
 ---
 
-## Task 3 – Capture HTTP Packets
+# Task 3 – Capture HTTP Packets
 
 I used `tcpdump` to capture the HTTP traffic generated while accessing my web page. My Python HTTP server was running on my Arch Linux system and was available at:
 
@@ -62,13 +62,13 @@ http-12326317.pcap
 
 The HTTP traffic analysed in Wireshark was between the client at `192.168.1.64` and the web server at `192.168.1.71`.
 
-### Connectivity test
+## Connectivity test
 
 I tested connectivity to the server using `ping`. Three packets were sent and all three replies were received, giving 0% packet loss.
 
 ![Ping test](images/week6_Task3_Ping.png)
 
-### ARP table
+## ARP table
 
 The ARP table showed the local gateway and client device. The entries visible in my screenshot included:
 
@@ -81,7 +81,7 @@ The ARP table showed the local gateway and client device. The entries visible in
 
 ---
 
-## Task 4 – Analyse HTTP Packet Capture
+# Task 4 – Analyse HTTP Packet Capture
 
 I opened `http-12326317.pcap` in Wireshark and used the following display filter:
 
@@ -100,7 +100,7 @@ The filtered capture showed four HTTP packets:
 
 ![Wireshark HTTP packet list](images/week6_Task4_Wireshark_HTTP_List.png)
 
-### a) HTTP requests and responses
+## a) HTTP requests and responses
 
 **Packet 7:** The browser requested my student page using:
 
@@ -150,7 +150,7 @@ The TCP source port was `50347`.
 
 Therefore, the HTTP request travelled from the client at `192.168.1.64` to the server at `192.168.1.71` using TCP port 80.
 
-### c) Date and time button
+## c) Date and time button
 
 Clicking the **Show date and time** button did not generate another HTTP request to the web server.
 
@@ -158,7 +158,7 @@ The reason is that the button is handled by JavaScript running inside the browse
 
 This is consistent with the HTTP capture because there was no separate HTTP request generated specifically for the date/time button.
 
-### d) Packet diagram
+## d) Packet diagram
 
 I used Packet 7 for the packet diagram because it contains the request for my newly created page.
 
@@ -190,19 +190,19 @@ The original editable draw.io diagram is also included in the submission folder:
 week6-task4_HTTP_Packet_diagram.drawio
 ```
 
-### e) Referrer
+## e) Referrer
 
 The HTTP request shown in Packet 7 does not contain a `Referer` header, so there is no referrer value in this request.
 
 A referrer normally identifies the page from which a browser navigated to another resource. If a referrer is supplied, a web server can use it to understand where a request came from and analyse how users move between pages.
 
-### f) Browser information
+## f) Browser information
 
 The request contained a `User-Agent` header. From this header, the server could learn information about the client browser and operating system.
 
 The captured value identified a browser based on Chrome 153 running on Windows 10. The User-Agent also included information such as the Windows platform, WebKit and Safari-compatible browser identifiers.
 
-### g) HTTP version and transport protocol
+## g) HTTP version and transport protocol
 
 The request in Packet 7 used:
 
@@ -218,7 +218,7 @@ HTTP/1.0 200 OK
 
 The HTTP communication used **TCP** as the transport protocol and the server used TCP port **80**.
 
-### h) TCP connection setup and data transfer
+## h) TCP connection setup and data transfer
 
 HTTP communication in the capture used TCP, which is connection-oriented. TCP normally establishes a connection using a three-way handshake:
 
@@ -232,7 +232,7 @@ Packet 7 is shown by Wireshark as **Stream Packet Number 4** and contains applic
 
 The HTTP request in Packet 7 occurred at **0.003456 seconds** in the capture. The exact elapsed time from the first SYN to the beginning of this data transfer depends on the timestamps of the three handshake packets in the complete unfiltered capture.
 
-### i) TCP acknowledgements
+## i) TCP acknowledgements
 
 TCP acknowledgements are used to confirm that data has been received. Packet 7 has the ACK flag set and Wireshark shows an acknowledgement number of `1`.
 
@@ -240,7 +240,7 @@ An acknowledgement is normally sent after receiving TCP data so that the sender 
 
 ---
 
-## Task 5 – View Your Cookies
+# Task 5 – View Your Cookies
 
 For this task, I used the browser Developer Tools and opened the cookie storage for a website.
 
