@@ -1,11 +1,10 @@
-# COIT20246 Networking and Cyber Security
+# Week 06 – Internet Applications
 
-## Week 06 – Internet Applications
+**Assessment:** COIT20246 Assessment 1 Part B  
 
 **Student Name:** Rohit Hargovanbhai Prajapati  
-**Student ID:** 12326317  
-**Week:** 06  
-**Topic:** Internet Applications
+
+**Student ID:** 12326317
 
 ---
 
