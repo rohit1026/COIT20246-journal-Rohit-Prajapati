@@ -177,25 +177,81 @@ PC3 ─┘                                                                    �
 
 ## Part C – Routing Tables
 
-Simplified routing tables were created for the two routers.
+The routing tables below show the routes required for communication between the three IPv4 networks in the proposed network design.
 
-### Router 1
+### Router 1 Routing Table
 
-| Destination Network | Next Hop | Interface |
-|----------------------|----------|-----------|
-| 63.17.1.0/24 | Directly connected | LAN interface |
-| 10.0.0.0/24 | Directly connected | WAN interface |
-| `<partner-first-two-values>.1.0/24` | 10.0.0.2 | WAN interface |
+| Destination Network | Next Hop | Interface | Description |
+|----------------------|----------|-----------|-------------|
+| `63.17.1.0/24` | Directly Connected | LAN Interface | Local LAN containing PC1, PC2 and PC3. |
+| `10.0.0.0/24` | Directly Connected | WAN Interface | Point-to-point WAN network connecting Router 1 and Router 2. |
+| `9.7.1.0/24` | `10.0.0.2` | WAN Interface | Remote LAN containing PC4 and PC5, reached through Router 2. |
 
-### Router 2
+Router 1 is directly connected to the `63.17.1.0/24` LAN and the `10.0.0.0/24` WAN network. The `9.7.1.0/24` network is a remote network, so Router 1 forwards packets for this network to Router 2 using `10.0.0.2` as the next hop.
 
-| Destination Network | Next Hop | Interface |
-|----------------------|----------|-----------|
-| `<partner-first-two-values>.1.0/24` | Directly connected | LAN interface |
-| 10.0.0.0/24 | Directly connected | WAN interface |
-| 63.17.1.0/24 | 10.0.0.1 | WAN interface |
+### Router 2 Routing Table
 
-These routing entries allow each router to identify whether a destination network is directly connected or must be reached through the other router.
+| Destination Network | Next Hop | Interface | Description |
+|----------------------|----------|-----------|-------------|
+| `9.7.1.0/24` | Directly Connected | LAN Interface | Local LAN containing PC4 and PC5. |
+| `10.0.0.0/24` | Directly Connected | WAN Interface | Point-to-point WAN network connecting Router 2 and Router 1. |
+| `63.17.1.0/24` | `10.0.0.1` | WAN Interface | Remote LAN containing PC1, PC2 and PC3, reached through Router 1. |
+
+Router 2 is directly connected to the `9.7.1.0/24` LAN and the `10.0.0.0/24` WAN network. The `63.17.1.0/24` network is a remote network, so Router 2 forwards packets for this network to Router 1 using `10.0.0.1` as the next hop.
+
+### PC1 Routing Table
+
+| Destination Network | Next Hop / Gateway | Interface | Description |
+|----------------------|---------------------|-----------|-------------|
+| `63.17.1.0/24` | Directly Connected | Ethernet | Local LAN containing PC1, PC2 and PC3. |
+| `0.0.0.0/0` | `63.17.1.1` | Ethernet | Default route used to reach networks outside LAN 1. |
+
+PC1 can communicate directly with devices on the `63.17.1.0/24` network. For traffic destined for another network, PC1 sends the packet to Router 1 at `63.17.1.1`.
+
+### PC2 Routing Table
+
+| Destination Network | Next Hop / Gateway | Interface | Description |
+|----------------------|---------------------|-----------|-------------|
+| `63.17.1.0/24` | Directly Connected | Ethernet | Local LAN containing PC1, PC2 and PC3. |
+| `0.0.0.0/0` | `63.17.1.1` | Ethernet | Default route used to reach networks outside LAN 1. |
+
+PC2 uses Router 1 at `63.17.1.1` as its default gateway when communicating with devices outside the local LAN.
+
+### PC3 Routing Table
+
+| Destination Network | Next Hop / Gateway | Interface | Description |
+|----------------------|---------------------|-----------|-------------|
+| `63.17.1.0/24` | Directly Connected | Ethernet | Local LAN containing PC1, PC2 and PC3. |
+| `0.0.0.0/0` | `63.17.1.1` | Ethernet | Default route used to reach networks outside LAN 1. |
+
+PC3 uses Router 1 at `63.17.1.1` as its default gateway for traffic destined for another IP network.
+
+### PC4 Routing Table
+
+| Destination Network | Next Hop / Gateway | Interface | Description |
+|----------------------|---------------------|-----------|-------------|
+| `9.7.1.0/24` | Directly Connected | Ethernet | Local LAN containing PC4 and PC5. |
+| `0.0.0.0/0` | `9.7.1.1` | Ethernet | Default route used to reach networks outside LAN 2. |
+
+PC4 can communicate directly with devices on the `9.7.1.0/24` network. For traffic destined for another network, PC4 sends the packet to Router 2 at `9.7.1.1`.
+
+### PC5 Routing Table
+
+| Destination Network | Next Hop / Gateway | Interface | Description |
+|----------------------|---------------------|-----------|-------------|
+| `9.7.1.0/24` | Directly Connected | Ethernet | Local LAN containing PC4 and PC5. |
+| `0.0.0.0/0` | `9.7.1.1` | Ethernet | Default route used to reach networks outside LAN 2. |
+
+PC5 uses Router 2 at `9.7.1.1` as its default gateway for traffic destined for another IP network.
+
+### Switches
+
+Switch 1 and Switch 2 are Layer 2 Ethernet switches. They forward Ethernet frames using MAC address tables rather than using IP routing tables.
+
+| Device | Function |
+|--------|----------|
+| Switch 1 | Provides Ethernet connectivity between PC1, PC2, PC3 and Router 1. |
+| Switch 2 | Provides Ethernet connectivity between PC4, PC5 and Router 2. |
 
 ### Routing Table Diagram
 
@@ -203,57 +259,203 @@ These routing entries allow each router to identify whether a destination networ
 
 ---
 
-## Part D – ICMP/IP Packet at a Router
+# Part D – ICMP/IP Packet Analysis
 
-Assume that **PC1** sends an ICMP Echo Request to **PC4**.
+To demonstrate communication between the two LANs, PC1 on LAN 1 sends an ICMP Echo Request to PC4 on LAN 2.
 
-The source and destination IP addresses remain the same while the packet travels through the routers:
+## Source and Destination Information
 
-- **Source IP:** `63.17.1.10`
-- **Destination IP:** `<partner-first-two-values>.1.10`
-- **Protocol:** ICMP
-- **Message:** Echo Request
+| Field | Value |
+|-------|-------|
+| Source Device | PC1 |
+| Source IP Address | `63.17.1.10` |
+| Destination Device | PC4 |
+| Destination IP Address | `9.7.1.10` |
+| Protocol | ICMP |
+| ICMP Message | Echo Request |
+| Source Network | `63.17.1.0/24` |
+| Destination Network | `9.7.1.0/24` |
+| WAN Network | `10.0.0.0/24` |
 
-At Router 1, the packet is received on the LAN interface and forwarded through the WAN interface towards Router 2.
+PC1 and PC4 are located on different IPv4 networks. Therefore, PC1 sends the packet to its default gateway, Router 1. Router 1 forwards the packet through the WAN link to Router 2, and Router 2 forwards it to PC4.
 
-### Packet Structure
+## Packet Flow
+
+```text
+PC1
+63.17.1.10
+    |
+    | ICMP Echo Request
+    v
+Switch 1
+    |
+    v
+Router 1
+LAN: 63.17.1.1
+WAN: 10.0.0.1
+    |
+    | 1 Gb/s Ethernet WAN
+    | Network: 10.0.0.0/24
+    v
+Router 2
+WAN: 10.0.0.2
+LAN: 9.7.1.1
+    |
+    v
+Switch 2
+    |
+    v
+PC4
+9.7.1.10
+```
+
+## ICMP/IP Encapsulation
+
+The ICMP Echo Request is carried inside an IPv4 packet. The IPv4 packet is then carried inside an Ethernet frame.
 
 ```text
 +--------------------------------------------------+
-| Ethernet Frame                                   |
-| Source MAC: Router 1 LAN/WAN interface*         |
-| Destination MAC: Next-hop device/interface*     |
+| Ethernet II Header                               |
+| Source MAC:      Current sender interface        |
+| Destination MAC: Next-hop interface              |
+| EtherType:       0x0800 (IPv4)                   |
 +--------------------------------------------------+
 | IPv4 Header                                      |
-| Source IP: 63.17.1.10                            |
-| Destination IP: <partner-first-two-values>.1.10 |
-| Protocol: ICMP                                   |
+| Source IP:      63.17.1.10                       |
+| Destination IP: 9.7.1.10                         |
+| Protocol:       ICMP                             |
+| TTL:            Decreased at each router         |
 +--------------------------------------------------+
 | ICMP Header                                      |
-| Type: 8 – Echo Request                           |
-| Code: 0                                          |
+| Type:           8 (Echo Request)                 |
+| Code:           0                                |
+| Checksum                                          |
+| Identifier                                        |
+| Sequence Number                                   |
 +--------------------------------------------------+
 | ICMP Data                                        |
 +--------------------------------------------------+
 ```
 
-\* The exact Ethernet MAC addresses depend on which router interface and network segment the packet is being captured on.
+## IP Addresses in the Packet
 
-### Important Point
+The end-to-end IP addresses are:
 
-The **IP source and destination addresses remain the end-host addresses** as the packet is routed between networks, apart from normal routing-related changes such as the IPv4 TTL being reduced at each router.
+```text
+Source IP:       63.17.1.10
+Destination IP:  9.7.1.10
+Protocol:        ICMP
+```
 
-The Ethernet MAC addresses, however, are associated with the devices on the **current local link**. Therefore, the Ethernet frame is different on different network segments.
+The source IP address belongs to PC1 and the destination IP address belongs to PC4. The routers use the destination IP address to determine where the packet should be forwarded.
 
-For example:
+The IPv4 TTL is reduced when the packet passes through a router.
 
-- On the first LAN, the frame is between the source PC and Router 1.
-- On the WAN link, the frame is between Router 1 and Router 2.
-- On the second LAN, the frame is between Router 2 and the destination PC.
+## Ethernet MAC Addresses
 
-### Packet Diagram
+The Ethernet MAC addresses are different on each network segment.
 
-![ICMP IP Packet Diagram](images/week5-task3-packet.png)
+### LAN 1 – PC1 to Router 1
+
+```text
+Source MAC:
+PC1 Ethernet Interface MAC
+
+Destination MAC:
+Router 1 LAN Interface MAC
+```
+
+PC1 sends the Ethernet frame to Router 1 because PC4 is outside PC1's local `63.17.1.0/24` network.
+
+### WAN – Router 1 to Router 2
+
+When Router 1 forwards the packet through the WAN link, it creates a new Ethernet frame.
+
+```text
+Source MAC:
+Router 1 WAN Interface MAC
+
+Destination MAC:
+Router 2 WAN Interface MAC
+```
+
+The IP addresses remain:
+
+```text
+Source IP:       63.17.1.10
+Destination IP:  9.7.1.10
+```
+
+However, the Ethernet MAC addresses are now those of the WAN interfaces of Router 1 and Router 2.
+
+### LAN 2 – Router 2 to PC4
+
+Router 2 forwards the packet towards PC4 using another Ethernet frame.
+
+```text
+Source MAC:
+Router 2 LAN Interface MAC
+
+Destination MAC:
+PC4 Ethernet Interface MAC
+```
+
+Therefore, the MAC addresses change when the packet moves between different Ethernet network segments.
+
+## Packet Captured at Router 1
+
+If the packet is captured on the LAN-side interface of Router 1, the frame can be represented as:
+
+```text
++--------------------------------------------------+
+| Ethernet II Header                               |
+|                                                  |
+| Source MAC:      PC1 Ethernet Interface MAC     |
+| Destination MAC: Router 1 LAN Interface MAC     |
+| EtherType:       0x0800 (IPv4)                   |
++--------------------------------------------------+
+| IPv4 Header                                      |
+|                                                  |
+| Source IP:      63.17.1.10                       |
+| Destination IP: 9.7.1.10                         |
+| Protocol:       ICMP                             |
++--------------------------------------------------+
+| ICMP Header                                      |
+|                                                  |
+| Type:           8 – Echo Request                 |
+| Code:           0                                |
++--------------------------------------------------+
+| ICMP Data                                        |
++--------------------------------------------------+
+```
+
+## MAC Address Summary
+
+| Network Segment | Source MAC | Destination MAC |
+|-----------------|------------|-----------------|
+| LAN 1 | PC1 Ethernet Interface | Router 1 LAN Interface |
+| WAN | Router 1 WAN Interface | Router 2 WAN Interface |
+| LAN 2 | Router 2 LAN Interface | PC4 Ethernet Interface |
+
+The task does not require the specific MAC addresses. It requires identifying which devices or interfaces provide the MAC addresses in the Ethernet frame.
+
+## Packet Forwarding Explanation
+
+When PC1 sends an ICMP Echo Request to PC4, PC1 determines that `9.7.1.10` is outside its local `63.17.1.0/24` network. PC1 therefore sends the Ethernet frame to its default gateway, Router 1.
+
+Router 1 receives the frame and processes the IPv4 packet. It checks its routing table and determines that the `9.7.1.0/24` network can be reached through Router 2 using `10.0.0.2` as the next hop.
+
+Router 1 forwards the packet through its WAN interface. A new Ethernet frame is used on the WAN link, with Router 1's WAN interface as the source MAC address and Router 2's WAN interface as the destination MAC address.
+
+Router 2 receives the packet and checks its routing table. Since `9.7.1.0/24` is directly connected to Router 2, it forwards the packet through its LAN interface towards PC4.
+
+Finally, Switch 2 forwards the Ethernet frame to PC4.
+
+This demonstrates that the IP addresses identify the source and final destination of the packet, while the MAC addresses are used for delivery across each individual Ethernet network segment.
+
+## Packet Diagram
+
+![ICMP/IP Packet Diagram](images/week5-task3-packet.png)
 
 ### Original Draw.io File
 
