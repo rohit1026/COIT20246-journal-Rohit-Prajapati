@@ -311,8 +311,8 @@ In a normal local network, reachable devices can appear in the ARP table after t
 
 | Device | IP Address | MAC Address | Reason |
 |--------|------------|-------------|--------|
-| Device 1 | `<IP from ARP table>` | `<MAC from ARP table>` | Discovered through local network communication |
-| Device 2 | `<IP from ARP table>` | `<MAC from ARP table>` | Discovered through local network communication |
+| Device 1 | `192.168.1.71` | `e8-c8-29-3d-c7-a5` | Discovered through local network communication |
+| Device 2 | `192.168.1.254` | `5c-f9-fd-71-14-b0` | Discovered through local network communication |
 
 The MAC addresses and device identities above should be based on the entries visible in the ARP table screenshot.
 
