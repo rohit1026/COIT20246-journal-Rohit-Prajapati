@@ -28,7 +28,7 @@ The project initiation activity helped me understand how the group for the upcom
 
 ## Screenshot
 
-![Project Group Formation](images/week4-task2-project-group.png)
+![Project Group Formation](images/week4-task2-group-formation.png)
 
 ---
 
