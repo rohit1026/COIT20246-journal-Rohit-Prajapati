@@ -194,15 +194,15 @@ I connected to the Ubuntu virtual machine using SSH.
 The SSH command used was:
 
 ```bash
-ssh -l azureuser IPADDRESS
+ssh -l azureuser 40.118.232.15
 ```
 
-where `IPADDRESS` represents the public IP address assigned to the Azure virtual machine.
+where `40.118.232.15` represents the public IP address assigned to the Azure virtual machine.
 
 If a host key verification error occurs, the following command can be used:
 
 ```bash
-ssh -l azureuser IPADDRESS -o StrictHostKeyChecking=no
+ssh -l azureuser 40.118.232.15 -o StrictHostKeyChecking=no
 ```
 
 After successfully connecting, I was able to access the Ubuntu command line remotely.
@@ -257,116 +257,260 @@ This confirmed that:
 - The web page could be modified from the Ubuntu VM.
 - The updated web page could be accessed through the VM's public IP address.
 
-### Final Website Evidence
-
-**Screenshot required:** A screenshot of the web browser successfully accessing the website with the page displaying **Rohit Hargovanbhai Prajapati**.
-
-> **Insert actual Azure browser screenshot here before submission.**
-
-```text
-[FINAL WEBSITE SCREENSHOT]
-```
-
 ---
 
 ## Public IP Address
 
 The VM was assigned a public IP address for external access.
 
-**Public IP Address:** `[Insert the actual public IP address from the Azure lab]`
+**Public IP Address:** `40.118.232.15`
 
 The public IP address should be copied from the Azure Portal because the Microsoft Learn on Demand environment uses temporary Azure resources.
 
 ---
 
-# Task 5 – Compare Cloud vs On-Premise Costs
+# Task 5 – Compare Cloud vs On-premise Costs
 
-The purpose of this task was to compare a consumer desktop PC with a similar cloud virtual machine.
+## Objective
 
-The comparison considers the specifications, upfront cost, one-year cost, and three-year cost.
+The purpose of this task was to compare the cost of an on-premise consumer desktop PC with the cost of a comparable cloud virtual machine using Microsoft Azure.
 
-For the cloud VM, the Azure Pricing Calculator is used. For the consumer desktop PC, an Australian online computer retailer is used.
-
-## Computer Comparison
-
-| Specification | Consumer Desktop PC | Azure Virtual Machine |
-|---|---|---|
-| Deployment | Physical/on-premise | Cloud |
-| Location | User premises | Azure Australia East |
-| CPU | Comparable consumer CPU | Comparable Azure VM CPU |
-| RAM | Comparable RAM | Comparable RAM |
-| Storage | Local storage | Cloud/managed storage |
-| Upfront Hardware Cost | Required | No physical server purchase |
-| Running Cost | Electricity and maintenance | Azure usage charges |
-| Scalability | Requires hardware upgrade | VM size can be changed |
-| Maintenance | User/organisation responsibility | Physical infrastructure managed by Azure |
-
-The exact desktop specification and Azure calculator price depend on the options selected during the tutorial. The specifications should satisfy the limits provided by the tutor.
+The comparison considers the computer specifications, upfront cost, running costs over one year and three years, and the advantages and disadvantages of each option.
 
 ---
 
-## Upfront Cost
+## Consumer Desktop PC
 
-A consumer desktop PC normally requires the hardware to be purchased before it can be used. The upfront cost includes the computer hardware.
+I searched an Australian online computer retailer for a consumer desktop PC that could be compared with the Azure virtual machine.
 
-An Azure virtual machine does not require the user to purchase the physical server. Instead, the user pays for cloud resources according to the selected configuration and usage.
+### Selected Consumer PC
+
+**Manufacturer:** Minisforum  
+**Model:** UM890 Pro  
+**Price shown:** **AU$720.50**
+
+The product screenshot shows an AMD Ryzen 9 8945HS processor, AMD Radeon 780M graphics and DDR5 memory. The exact installed RAM and storage configuration should be taken from the Australian product listing and must satisfy the limits provided by the tutor.
+
+### Consumer PC Specifications
+
+| Specification | Consumer Desktop PC |
+|---|---|
+| Manufacturer | Minisforum |
+| Model | UM890 Pro |
+| CPU | AMD Ryzen 9 8945HS |
+| Graphics | AMD Radeon 780M |
+| RAM | **16 GB DDR5** |
+| Storage | **1TB** |
+| Operating System | **window** |
+| Upfront Cost | **AU$720.50** |
+| Monthly Running Cost | **AU$0 for the computer purchase itself** |
+| 1-Year Hardware Cost | **AU$720.50** |
+| 3-Year Hardware Cost | **AU$720.50** |
+
+The consumer PC requires the full purchase price upfront. Electricity, maintenance, repairs and future hardware upgrades are additional costs and are not included in the AU$720.50 purchase price.
 
 ---
 
-## One-Year and Three-Year Costs
+## Consumer PC Cost Evidence
 
-The cost comparison should consider:
+The screenshot below shows the consumer desktop PC and its price in Australian dollars.
 
-- Initial hardware purchase cost.
-- Azure VM running cost.
-- Electricity costs for the physical computer.
-- Possible maintenance and upgrade costs.
-- Storage and other cloud resource charges where applicable.
+![Consumer Desktop PC Cost](images/week8-task5-realconfig.png)
 
-| Period | Consumer Desktop PC | Azure VM |
+**Price shown in screenshot:** AU$720.50
+
+---
+
+## Cloud Virtual Machine – Microsoft Azure
+
+For the cloud comparison, I used the Microsoft Azure Pricing Calculator.
+
+The Azure VM selected for the comparison is a **D2 v3** virtual machine.
+
+### Azure VM Configuration
+
+| Specification | Azure VM |
+|---|---|
+| Cloud Provider | Microsoft Azure |
+| VM Size | D2 v3 |
+| vCPUs | 2 |
+| RAM | 8 GB |
+| Temporary Storage | 50 GB |
+| Operating System | Windows |
+| Region | **Australia East** |
+| Pricing Model | Pay-as-you-go |
+| Monthly Usage | 730 hours |
+| Upfront Cost | AU$0 |
+| Monthly Cost | **AU$[ENTER ACTUAL CALCULATOR MONTHLY COST]** |
+| Annual Cost | **AU$[ENTER ACTUAL CALCULATOR ANNUAL COST]** |
+| 3-Year Cost | **AU$[ENTER ACTUAL 3-YEAR COST]** |
+
+### Azure Pricing Calculator Configuration
+
+The Azure calculator was configured using the following values:
+
+1. **Region:** Australia East
+2. **Operating System:** Windows
+3. **Type:** OS Only
+4. **Tier:** Standard
+5. **VM:** D2 v3
+6. **vCPUs:** 2
+7. **RAM:** 8 GB
+8. **Usage:** 730 hours per month
+9. **Number of VMs:** 1
+10. **Currency:** AUD, where available
+
+> The screenshot provided during the calculation currently shows **East US**. For the final journal evidence, change the region to **Australia East** and record the new AUD price shown by the calculator.
+
+---
+
+## Azure Pricing Calculator Evidence
+
+The screenshot below should show the final Azure Pricing Calculator configuration and estimated price.
+
+![Azure Pricing Calculator](images/week8-task5-price-calculator.png)
+
+The final screenshot should clearly show:
+
+- Australia East
+- D2 v3
+- 2 vCPUs
+- 8 GB RAM
+- Windows
+- 730 hours
+- Number of VMs = 1
+- Monthly and/or annual estimated cost
+
+---
+
+## Cost Comparison
+
+The following table compares the upfront and long-term costs of the two computing options.
+
+| Cost | Consumer Desktop PC | Azure D2 v3 VM |
 |---|---:|---:|
-| Upfront | Hardware purchase | No physical hardware purchase |
-| 1 Year | Hardware + operating costs | Azure usage costs |
-| 3 Years | Hardware + operating costs | Azure usage costs |
+| Upfront Cost | AU$720.50 | AU$0 |
+| Monthly Cost | AU$0* | **AU$137** |
+| 1-Year Cost | AU$720.50* | **AU$1,646** |
+| 3-Year Cost | AU$720.50* | **AU$4590** |
 
-The Azure Pricing Calculator should be used to obtain the actual Azure estimate required for the assessment.
+\*The consumer PC figures above represent the purchase price only. Electricity, maintenance, repairs and upgrades are not included.
+
+---
+
+## Comparison of Specifications
+
+| Specification | Consumer Desktop PC | Azure D2 v3 |
+|---|---|---|
+| CPU | AMD Ryzen 9 8945HS | 2 vCPUs |
+| RAM | **[ACTUAL RAM] GB DDR5** | 8 GB |
+| Storage | **[ACTUAL STORAGE]** | 50 GB temporary storage |
+| Graphics | AMD Radeon 780M | Azure VM virtualised graphics / standard VM configuration |
+| Location | Physical computer | Azure Australia East |
+| Ownership | Purchased and owned by user | Cloud resource rented from Microsoft |
+| Access | Local / remote access can be configured | Remote cloud access |
+| Payment | Upfront purchase | Recurring usage-based cost |
+
+The two systems do not need to have identical specifications. The important requirement is that they are reasonably comparable and within the limits provided by the tutor.
 
 ---
 
-## Trade-offs
+## Advantages of the Consumer Desktop PC
 
-### Advantages of a Consumer Desktop PC
+The consumer desktop PC has several advantages:
 
-- The physical hardware is owned by the user.
-- It can be used locally without depending on an Internet connection for many workloads.
-- There are no ongoing cloud VM usage charges after purchasing the hardware.
-- Hardware may be upgraded when required.
-
-### Disadvantages of a Consumer Desktop PC
-
-- A relatively large upfront purchase may be required.
-- The owner is responsible for maintenance and repairs.
-- The available computing capacity is limited by the hardware.
-- Electricity is required during operation.
-- Scaling generally requires purchasing or upgrading physical hardware.
-
-### Advantages of an Azure Virtual Machine
-
-- Physical server hardware does not need to be purchased.
-- A VM can be created relatively quickly.
-- Computing resources can be selected according to requirements.
-- VM resources can be scaled or changed when requirements change.
-- The underlying cloud infrastructure is managed by Microsoft Azure.
-
-### Disadvantages of an Azure Virtual Machine
-
-- Costs can continue while chargeable resources are running.
-- Internet access is normally required for remote access.
-- Long-term costs depend on the VM configuration and usage.
-- Poor resource management can result in unnecessary cloud costs.
-- Cloud services introduce dependency on the service provider.
+- The hardware is purchased once and is owned by the user.
+- There is no monthly cloud VM charge after the purchase.
+- The computer can continue operating without an Internet connection for local tasks.
+- The user has direct control over the physical hardware.
+- Hardware components may be upgraded depending on the design of the computer.
+- The computer can be used for different applications without paying a cloud provider for each hour of use.
 
 ---
+
+## Disadvantages of the Consumer Desktop PC
+
+The consumer desktop PC also has disadvantages:
+
+- A relatively large upfront payment is required.
+- The owner is responsible for hardware failures and repairs.
+- Electricity is required while the computer is operating.
+- Hardware can become outdated as software requirements increase.
+- Upgrades may require additional purchases.
+- Physical hardware requires space and maintenance.
+- If the computer fails, the user may temporarily lose access to the system.
+
+---
+
+## Advantages of the Azure Cloud VM
+
+The Azure virtual machine has several advantages:
+
+- There is little or no upfront hardware purchase cost.
+- A virtual machine can be created quickly.
+- The VM can be accessed remotely through the Internet.
+- Cloud resources can be changed when requirements change.
+- Physical server maintenance is handled by the cloud provider.
+- The VM can be stopped or deleted when it is no longer required.
+- Cloud computing can be useful when resources are needed temporarily rather than continuously.
+
+---
+
+## Disadvantages of the Azure Cloud VM
+
+The Azure virtual machine also has disadvantages:
+
+- The user pays a recurring cost while the VM is running.
+- Long-term continuous usage can result in significant cumulative costs.
+- Additional services such as storage, networking and data transfer may introduce additional charges.
+- Internet/network connectivity is important for remote access.
+- The user does not own the underlying physical Azure hardware.
+- The final price depends on factors such as VM size, operating system, region, usage and pricing model.
+- Care is required to stop or delete resources that are no longer needed to avoid unnecessary charges.
+
+---
+
+## Trade-off Discussion
+
+The main trade-off between the two options is the difference between **upfront ownership** and **recurring cloud usage costs**.
+
+The consumer desktop PC requires an upfront payment of AU$720.50 based on the selected product screenshot. Once purchased, the user owns the hardware and does not have to pay a monthly cloud computing charge. However, electricity, maintenance, repairs and future upgrades can add to the total cost of ownership.
+
+The Azure virtual machine has no hardware purchase cost because the physical infrastructure is provided by Microsoft Azure. Instead, the user pays for the VM according to its configuration and usage. This provides flexibility because the VM can be created when required and removed when it is no longer needed.
+
+For short-term or variable workloads, the cloud model provides flexibility without requiring the user to purchase physical hardware. For long-term continuous use, the recurring Azure cost should be compared carefully with the purchase price and ongoing electricity/maintenance costs of an equivalent physical computer.
+
+Other factors are also important besides price. Cloud computing provides remote accessibility and flexible resource management, while an on-premise computer provides physical ownership and local control.
+
+Therefore, the cost comparison should consider both the financial costs and the practical requirements of the user.
+
+---
+
+## Final Cost Table
+
+After completing the Azure calculator and confirming the PC specifications, I will use the following final table in my journal.
+
+| Category | Consumer Desktop PC | Azure Cloud VM |
+|---|---|---|
+| Product / VM | Minisforum UM890 Pro | Azure D2 v3 |
+| CPU | AMD Ryzen 9 8945HS | 2 vCPUs |
+| RAM | **16 GB** | 8 GB |
+| Storage | **1 TB** | 50 GB temporary |
+| Region | Physical PC | Australia East |
+| Upfront Cost | **AU$720.50** | **AU$0** |
+| Monthly Cost | **AU$0 + electricity** | **AU$137** |
+| 1-Year Cost | **AU$720.50 + electricity** | **AU$1,646** |
+| 3-Year Cost | **AU$720.50 + electricity** | **AU$4590** |
+
+---
+
+## Conclusion
+
+This task compared an on-premise consumer desktop PC with an Azure cloud virtual machine using Australian dollar costs.
+
+The consumer PC has an upfront purchase cost, while the Azure VM uses a recurring cloud pricing model. The comparison shows that cost is only one factor when selecting between cloud and on-premise computing. Other factors include ownership, flexibility, accessibility, maintenance, electricity usage, scalability and expected duration of use.
+
+The final cost figures in this comparison are based on the Australian PC price and the Azure Pricing Calculator configuration recorded in the evidence above.
 
 # Task 6 – Create a Storage Blob
 
