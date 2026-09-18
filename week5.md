@@ -467,44 +467,115 @@ This demonstrates that the IP addresses identify the source and final destinatio
 
 ## Objective
 
-The objective of this activity was to discuss hypothetical academic integrity scenarios and consider how students could avoid academic misconduct, the possible level of a breach, and the potential consequences.
+The objective of this activity was to discuss a hypothetical academic integrity scenario and consider how students could avoid academic misconduct, the possible level of a breach, the likely consequences, and the future implications if the misconduct was not detected.
 
 ## Selected Scenario
 
-**Scenario:** `<Insert the scenario provided by the tutor>`
+### Scenario: Sharing and Copying an Individual Assignment
+
+A student was required to complete an individual programming assignment. The assessment instructions stated that the work had to be completed independently and that students were not permitted to share their solutions with other students.
+
+The student was struggling with the programming task and asked a classmate for help. Instead of only discussing the programming concepts, the classmate sent the student their completed assignment. The student copied significant sections of the solution, changed some variable names and formatting, and submitted the assignment as their own work.
+
+The student who provided the completed assignment also knew that the assessment was an individual task but still shared their solution with the other student.
+
+The issue was later identified when the two submissions were compared and significant similarities were found.
 
 ### Discussion
 
-The selected scenario involved a student who `<briefly describe what happened in the scenario>`.
+The selected scenario involved both students participating in behaviour that could compromise the integrity and fairness of an individual assessment.
 
-The main issue in this situation was that the student's actions could affect the integrity and fairness of the assessment process. Students are expected to complete assessment work honestly and follow the academic integrity requirements provided by the university.
+The main issue was that the student who submitted the copied work represented another student's work as their own. The student who shared the completed assignment also contributed to the problem because the assessment instructions did not permit students to share their solutions.
 
-### a) How the Student Could Have Avoided the Problem
+This scenario was interesting because it demonstrated that academic integrity is not only about copying information from websites or sources. It can also involve students sharing answers or working together in ways that are not permitted by the assessment requirements.
 
-The student could have avoided the problem by:
+CQUniversity explains that collusion can occur when students work together in ways that are not permitted, including sharing answers, co-writing individual assignments, or using another student's work. Academic misconduct can include plagiarism, collusion, cheating, file sharing and contract cheating.
 
-1. Completing the assessment using their own work and understanding rather than using unauthorised material or assistance.
-2. Asking the tutor for clarification or support when they were unsure about assessment requirements.
+## a) How the Students Could Have Avoided the Problem
 
-### b) Academic Integrity Breach and Outcome
+The students could have avoided the problem by:
 
-Based on the scenario, the relevant academic integrity level and outcome should be identified according to the applicable CQU policy.
+1. **Following the assessment instructions:**  
+   The student should have completed the individual assessment independently and should not have copied another student's completed solution.
 
-**Breach level:** `<Insert level from tutor scenario / CQU policy>`
+2. **Asking the tutor for help:**  
+   If the student did not understand the programming task, they could have asked the tutor or Unit Coordinator for clarification rather than requesting another student's completed assignment.
 
-**Likely outcome:** `<Insert outcome discussed in class>`
+3. **Discussing concepts rather than exchanging answers:**  
+   Students can study together where collaboration is allowed, but they should avoid sharing completed answers or solutions when the assessment requires individual work.
 
-The outcome is intended to address the academic integrity issue and maintain fairness across students completing the assessment.
+4. **Starting the assessment earlier:**  
+   Beginning the assessment earlier would have given the student more time to understand the requirements, practise the programming concepts and seek legitimate academic support.
 
-### c) Future Ramifications
+5. **The other student should not have shared the completed assignment:**  
+   Even though the second student had completed their own work, they should have refused to provide the solution because sharing it could contribute to academic misconduct.
 
-If academic misconduct occurs but is not detected during the teaching term, it may still create problems later. Evidence of misconduct can potentially be identified through later investigations or assessment-related processes. It can also affect confidence in the student's submitted work and may have consequences under university academic integrity procedures.
+## b) Academic Integrity Breach and Outcome
+
+### Breach Level
+
+**Breach type:** Potential academic misconduct involving **collusion and/or plagiarism**.
+
+The student's submission could be considered a breach because significant parts of another student's work were submitted as their own. The student who shared the completed solution may also face academic integrity consequences because the sharing of assessment answers was not permitted.
+
+CQUniversity identifies collusion as working together in ways that are not permitted, such as sharing answers, co-writing individual assignments, or using another student's work. Academic misconduct is considered a breach of academic integrity.
+
+### Likely Outcome
+
+The exact outcome would depend on the evidence, circumstances of the case, and CQUniversity's academic integrity process. It would not be appropriate to assume that every case automatically receives the same penalty.
+
+Possible outcomes can include educational requirements or other academic integrity outcomes and penalties. Depending on the circumstances, CQU lists outcomes such as referral to the Academic Learning Centre, completion of Foundations of Academic Integrity, replacement assessment with a maximum pass grade, a fail for the assessment task, or a fail/not competent grade for the unit. More serious cases can have more significant consequences.
+
+For this scenario, a likely academic consequence could be a penalty affecting the assessment result, such as receiving zero or a fail for the assessment, depending on the outcome of the academic integrity process.
+
+### Is the Outcome Fair?
+
+Our group discussed whether an academic integrity penalty would be fair.
+
+We considered that academic integrity rules are important because students who complete their assessments honestly invest their own time and effort. If another student receives marks for copied work, it could create an unfair advantage over students who completed their work independently.
+
+At the same time, we discussed that each case should be considered individually because the circumstances and evidence may differ between students. The university's process therefore allows the circumstances of an individual case to be considered before an outcome or penalty is determined.
+
+## c) Future Ramifications
+
+If a student performs academic misconduct but is not caught during the teaching term, there can still be future ramifications.
+
+For the student who submitted the copied work:
+
+- They may receive marks for knowledge and skills that they have not actually developed.
+- They may struggle with later subjects because they did not properly understand the underlying concepts.
+- The academic integrity issue could potentially be identified later through assessment reviews or other university processes.
+- If the misconduct is subsequently investigated, the student may still face an academic integrity outcome or penalty.
+- A fail result for a unit could affect future enrolments and study progression.
+
+For the student who shared the work:
+
+- They may also face academic integrity consequences if their involvement in sharing the assessment is established.
+- Sharing completed assessment solutions can negatively affect other students and the fairness of the assessment process.
+- It may create an academic integrity issue even though the student originally completed their own work.
+
+For other students:
+
+- Students who complete their assessments honestly may be disadvantaged if another student receives an academic result through copied work.
+- It can reduce confidence that assessment results accurately represent individual knowledge and skills.
+
+Therefore, avoiding academic misconduct is important not only for an individual student's results but also for maintaining fairness and trust within the university community.
 
 ## Recommendations to Other Students
 
-1. **Complete assessment work honestly:** Students should use their own work and only use resources or assistance that are permitted by the assessment requirements.
+### 1. Complete Assessment Work Honestly
 
-2. **Ask for help when unsure:** If there is uncertainty about collaboration, referencing, artificial intelligence, or other assessment requirements, students should ask the tutor or university for clarification before submitting the work.
+Students should complete individual assessments using their own work and understanding. They should only use resources, collaboration, or assistance that are explicitly permitted by the assessment requirements. Students should never share or submit another student's completed assessment as their own.
+
+### 2. Ask for Help When Unsure
+
+If a student is struggling with an assessment, they should ask the tutor, Unit Coordinator or appropriate university support service for assistance. It is better to ask for legitimate academic support than to copy another student's work or share completed assessment answers.
+
+## Conclusion
+
+This scenario demonstrated that academic integrity applies to both the student who copies work and the student who knowingly shares work when sharing is not permitted. Academic misconduct can have consequences for individual students and can also affect the fairness of assessment for other students.
+
+The main lesson from the discussion was that students should understand the assessment requirements, complete individual work independently, and seek appropriate academic support whenever they are unsure or experiencing difficulties.
 
 ---
 
